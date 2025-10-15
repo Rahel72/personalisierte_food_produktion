@@ -304,3 +304,9 @@ class Dobot:
         j3 = struct.unpack_from('f', response.params, 24)[0]
         j4 = struct.unpack_from('f', response.params, 28)[0]
         return x, y, z, r, j1, j2, j3, j4
+
+if __name__ == "__main__":
+    # Beispiel: Dobot-Objekt erstellen (Port ggf. anpassen!)
+    dobot = Dobot("/dev/ttyUSB0", verbose=True)
+    print(dobot.pose())
+    dobot.close()
