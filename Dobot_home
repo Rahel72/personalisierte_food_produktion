@@ -1,0 +1,19 @@
+from DobotTCP import Dobot
+
+# Connect the robot
+port = "/dev/ttyACM1"
+Dobot.Connect()
+
+# Enable robot and parse response
+(err, rsp, cmd) = Dobot.EnableRobot()
+print(f"  Error code: {err}")
+print(f"  Response: {rsp}")
+print(f"  Command: {cmd}")
+
+# Move robot with joint motion to pose
+Dobot.MovJ("pose={0,0,0,0,0,0}")
+
+# Home robot
+Dobot.Home()
+
+Dobot.Disconnect()

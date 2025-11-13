@@ -27,7 +27,7 @@ Das Environment (pydobot) muss ausserhab des Repositories platzert werden.
 
  ```. old_dobotpy/bin/activate```
 
-# port herausfnden 
+# port herausfnden
 
-```ls /dev/ttyACM```
+```ls /dev/* | grep ttyACM```
 
