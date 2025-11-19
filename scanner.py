@@ -4,6 +4,8 @@ import time
 
 port = "/dev/ttyACM0"
 device = Dobot(port=port)
+device.connect()
+print("✅ Verbunden.")
 
 # Clear any existing alarms
 # device.clear_alarms()

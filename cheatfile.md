@@ -29,5 +29,5 @@ Das Environment (pydobot) muss ausserhab des Repositories platzert werden.
 
 # port herausfnden 
 
-```ls /dev/ttyACM```
+```ls /dev/ttyACM*```
 

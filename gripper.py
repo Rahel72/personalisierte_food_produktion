@@ -1,19 +1,28 @@
-from pydobotplus import Dobot
+from dobotapi import Dobot
 import time
-
 
 port = "/dev/ttyACM0"
 device = Dobot(port=port)
+device.connect()
+print("✓ Verbunden")
 
-# # Clear any existing alarms
-# device.clear_alarms()
 
-# Pumpe muss am GP1 angeschlossen sein!
-# Function to release the gripper from the claw 
-device.grip(False)  # Open gripper (True = close, False = open)
-time.sleep(2)
-device.grip(True)
+# Gripper öffnen 
+device.gripper.open()
+print("✓ Gripper offen")
 time.sleep(2)
 
-device.suck(False)
-device.close() # Open gripper
+
+# Gripper schliessen
+device.gripper.close()
+print("✓ Gripper geschlossen")
+time.sleep(2)
+
+# Gripper öffnen
+device.gripper.open()
+print("✓ Gripper offen")
+time.sleep(2)
+
+# Disconnect
+device.close()
+print("\n✓ Fertig")
