@@ -8,7 +8,7 @@ print("✓ Verbunden")
 
 # Home - Fahre in Homeposition
 print("\n🏠 Fahre in Home-Position...")
-device.move_to(282.21, -52.48, 113.57, -10.54)
+device.move_to(261.16, -106.34, 104.47, -22.16)
 print("✓ Home-Position erreicht")
 
 

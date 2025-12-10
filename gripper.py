@@ -13,15 +13,15 @@ print("✓ Gripper offen")
 time.sleep(2)
 
 
-# Gripper schliessen
-device.gripper.close()
-print("✓ Gripper geschlossen")
-time.sleep(2)
+# # Gripper schliessen
+# device.gripper.close()
+# print("✓ Gripper geschlossen")
+# time.sleep(2)
 
-# Gripper öffnen
-device.gripper.open()
-print("✓ Gripper offen")
-time.sleep(2)
+# # Gripper öffnen
+# device.gripper.open()
+# print("✓ Gripper offen")
+# time.sleep(2)
 
 # Disconnect
 device.close()
