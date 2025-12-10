@@ -2,7 +2,7 @@ from dobotapi import Dobot
 import time
 
 # Warte kurz damit Verbindung stabil ist
-time.sleep(0.5)
+time.sleep(0.2)
 
 port = "/dev/ttyACM0"
 device = Dobot(port=port)
@@ -24,7 +24,7 @@ try:
     # Fahre beide Wege (es ist ok wenn einer nicht nötig ist)
     for pos in path_from_white:
         device.move_to(*pos)
-        time.sleep(1)
+        time.sleep(0.3)
     print("✓ Home erreicht")
 finally:
     device.close()

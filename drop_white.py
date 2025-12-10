@@ -2,7 +2,7 @@ from dobotapi import Dobot
 import time
 
 # Warte kurz damit Verbindung stabil ist
-time.sleep(0.5)
+time.sleep(0.2)
 
 port = "/dev/ttyACM0"
 device = Dobot(port=port)
@@ -20,11 +20,14 @@ try:
     print("🚀 Fahre zur weissen Plattform...")
     for pos in path_to_white[1:]:
         device.move_to(*pos)
-        time.sleep(1)
+        time.sleep(0.3)
     
     print("🖐️  Gripper öffnet...")
     device.gripper.open()
-    time.sleep(1)
+    time.sleep(0.3)
+    print ("⬆️ Fahre hoch...")
+    device.move_to(33.23, 299.73, 80.28, 83.67)
+    time.sleep(0.3)
     print("✓ Objekt auf weisser Plattform abgelegt")
 finally:
     device.close()
