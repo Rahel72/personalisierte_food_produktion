@@ -2,25 +2,25 @@ from dobotapi import Dobot
 import time
 
 # Warte kurz damit Verbindung stabil ist
-time.sleep(0.5)
+time.sleep(0.1)
 
 try:
     device = Dobot(port="/dev/ttyACM0")
     device.connect()
     
     print("🤖 Pick startet...")
-    time.sleep(1)
+    time.sleep(0.3)
     
     device.gripper.open()
-    time.sleep(1)
+    time.sleep(0.3)
     
     print("🚀 Fahre zur Pickup-Station...")
     device.move_to(268.60, -113.15, 35.41, -22.85)
-    time.sleep(2)
+    time.sleep(0.3)
     
     print("✋ Gripper schliesst...")
     device.gripper.close()
-    time.sleep(1)
+    time.sleep(0.1)
     
     print("✓ Objekt gegriffen - Pick fertig")
     device.close()

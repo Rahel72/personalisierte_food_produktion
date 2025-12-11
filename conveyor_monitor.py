@@ -30,7 +30,7 @@ if __name__ == "__main__":
         # HINWEIS: Je nach Verkabelung ist True oder False das Signal für "Objekt da".
         # Wir nehmen an, True bedeutet "Objekt erkannt".
         while device.get_ir() == False:
-            time.sleep(0.05)
+            time.sleep(0.1)
             
         print("🔴 STOPP - Objekt erkannt")
         device.conveyor_belt.idle() # Förderband stoppen

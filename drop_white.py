@@ -2,7 +2,7 @@ from dobotapi import Dobot
 import time
 
 # Warte kurz damit Verbindung stabil ist
-time.sleep(0.2)
+time.sleep(0.1)
 
 port = "/dev/ttyACM0"
 device = Dobot(port=port)
@@ -27,7 +27,7 @@ try:
     time.sleep(0.3)
     print ("⬆️ Fahre hoch...")
     device.move_to(33.23, 299.73, 80.28, 83.67)
-    time.sleep(0.3)
+    time.sleep(0.1)
     print("✓ Objekt auf weisser Plattform abgelegt")
 finally:
     device.close()
